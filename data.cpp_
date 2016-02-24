@@ -1,0 +1,31 @@
+#include "data.h"
+   
+bool data::isChecked (void)
+{
+    return bChecked;
+}
+
+unsigned int data::getTimeStamp (void)
+{
+    return uTimeStamp;
+}
+
+unsigned int data::getData (void)
+{
+    return uData;
+}
+
+void data::setChecked (void)
+{
+    bChecked = true;
+}
+
+void data::setTimeStamp (unsigned int uTimeStampIn)
+{
+    uTimeStamp = uTimeStampIn;
+}
+
+void data::setData (unsigned int uDataIn)
+{
+    uData = uDataIn;
+}

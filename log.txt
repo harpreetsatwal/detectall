@@ -1,0 +1,161 @@
+g++ -std=gnu++0x  -Wl,--no-as-needed   -c -o detector.o detector.cpp
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:36:5: error: ‘mutex’ does not name a type
+     mutex m_mutex;
+     ^
+data.h: In member function ‘T* doubleBuffer<T>::start_writing()’:
+data.h:52:9: error: ‘lock_guard’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+         ^
+data.h:52:9: note: suggested alternative:
+In file included from data.h:4:0,
+                 from unit.h:15,
+                 from detector.h:10,
+                 from detector.cpp:7:
+/usr/include/c++/4.8/mutex:408:11: note:   ‘std::lock_guard’
+     class lock_guard
+           ^
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:52:20: error: ‘mutex’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+                    ^
+data.h:52:20: note: suggested alternative:
+In file included from data.h:4:0,
+                 from unit.h:15,
+                 from detector.h:10,
+                 from detector.cpp:7:
+/usr/include/c++/4.8/mutex:117:9: note:   ‘std::mutex’
+   class mutex : private __mutex_base
+         ^
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:52:32: error: ‘m_mutex’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+                                ^
+data.h:52:39: error: there are no arguments to ‘lock’ that depend on a template parameter, so a declaration of ‘lock’ must be available [-fpermissive]
+         lock_guard<mutex> lock(m_mutex);
+                                       ^
+data.h:52:39: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+data.h: In member function ‘void doubleBuffer<T>::end_writing()’:
+data.h:64:9: error: ‘lock_guard’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+         ^
+data.h:64:9: note: suggested alternative:
+In file included from data.h:4:0,
+                 from unit.h:15,
+                 from detector.h:10,
+                 from detector.cpp:7:
+/usr/include/c++/4.8/mutex:408:11: note:   ‘std::lock_guard’
+     class lock_guard
+           ^
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:64:20: error: ‘mutex’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+                    ^
+data.h:64:20: note: suggested alternative:
+In file included from data.h:4:0,
+                 from unit.h:15,
+                 from detector.h:10,
+                 from detector.cpp:7:
+/usr/include/c++/4.8/mutex:117:9: note:   ‘std::mutex’
+   class mutex : private __mutex_base
+         ^
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:64:32: error: ‘m_mutex’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+                                ^
+data.h:64:39: error: there are no arguments to ‘lock’ that depend on a template parameter, so a declaration of ‘lock’ must be available [-fpermissive]
+         lock_guard<mutex> lock(m_mutex);
+                                       ^
+data.h: In member function ‘T* doubleBuffer<T>::start_reading()’:
+data.h:80:9: error: ‘lock_guard’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+         ^
+data.h:80:9: note: suggested alternative:
+In file included from data.h:4:0,
+                 from unit.h:15,
+                 from detector.h:10,
+                 from detector.cpp:7:
+/usr/include/c++/4.8/mutex:408:11: note:   ‘std::lock_guard’
+     class lock_guard
+           ^
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:80:20: error: ‘mutex’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+                    ^
+data.h:80:20: note: suggested alternative:
+In file included from data.h:4:0,
+                 from unit.h:15,
+                 from detector.h:10,
+                 from detector.cpp:7:
+/usr/include/c++/4.8/mutex:117:9: note:   ‘std::mutex’
+   class mutex : private __mutex_base
+         ^
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:80:32: error: ‘m_mutex’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+                                ^
+data.h:80:39: error: there are no arguments to ‘lock’ that depend on a template parameter, so a declaration of ‘lock’ must be available [-fpermissive]
+         lock_guard<mutex> lock(m_mutex);
+                                       ^
+data.h: In member function ‘void doubleBuffer<T>::end_reading()’:
+data.h:92:9: error: ‘lock_guard’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+         ^
+data.h:92:9: note: suggested alternative:
+In file included from data.h:4:0,
+                 from unit.h:15,
+                 from detector.h:10,
+                 from detector.cpp:7:
+/usr/include/c++/4.8/mutex:408:11: note:   ‘std::lock_guard’
+     class lock_guard
+           ^
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:92:20: error: ‘mutex’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+                    ^
+data.h:92:20: note: suggested alternative:
+In file included from data.h:4:0,
+                 from unit.h:15,
+                 from detector.h:10,
+                 from detector.cpp:7:
+/usr/include/c++/4.8/mutex:117:9: note:   ‘std::mutex’
+   class mutex : private __mutex_base
+         ^
+In file included from unit.h:15:0,
+                 from detector.h:10,
+                 from detector.cpp:7:
+data.h:92:32: error: ‘m_mutex’ was not declared in this scope
+         lock_guard<mutex> lock(m_mutex);
+                                ^
+data.h:92:39: error: there are no arguments to ‘lock’ that depend on a template parameter, so a declaration of ‘lock’ must be available [-fpermissive]
+         lock_guard<mutex> lock(m_mutex);
+                                       ^
+In file included from detector.cpp:7:0:
+detector.h: At global scope:
+detector.h:20:47: error: expected ‘;’ at end of member declaration
+     void initBuf ( doubleBuffer<int> &soBufArg)
+                                               ^
+detector.cpp:14:6: error: prototype for ‘bool detector::initBuf(doubleBuffer<int>&)’ does not match any in class ‘detector’
+ bool detector::initBuf ( doubleBuffer<int> &soBufArg)
+      ^
+In file included from detector.cpp:7:0:
+detector.h:20:10: error: candidate is: void detector::initBuf(doubleBuffer<int>&)
+     void initBuf ( doubleBuffer<int> &soBufArg)
+          ^
+make: *** [detector.o] Error 1
