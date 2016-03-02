@@ -9,6 +9,7 @@ TEMP_DIR = obj
 SRCS      = $(wildcard *.cpp)
 OBJS      = $(patsubst %.cpp,$(TEMP_DIR)/%.o,$(SRCS))
 
+
 all:$(EXE)
   
 $(EXE): $(OBJS)
@@ -22,7 +23,7 @@ $(TEMP_DIR):
 $(TEMP_DIR)/%.o : %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+.PHONY: clean
 clean:
 	rm -f $(PROGS) $(OBJS) core
 	rm -rf $(TEMP_DIR)
-
