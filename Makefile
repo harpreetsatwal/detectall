@@ -1,6 +1,6 @@
 CXXFLAGS =-std=gnu++0x  -Wl,--no-as-needed
 
-PROGS     = detect
+EXE     = detect
 
 LDFLAGS = -lpthread
 
@@ -8,9 +8,10 @@ TEMP_DIR = obj
 
 SRCS      = $(wildcard *.cpp)
 OBJS      = $(patsubst %.cpp,$(TEMP_DIR)/%.o,$(SRCS))
-all:$(PROGS)
+
+all:$(EXE)
   
-$(PROGS): $(OBJS)
+$(EXE): $(OBJS)
 	$(CXX) $(CXXFLAGS)  $^  $(INCLUDE) $(LDFLAGS) $(LDLIBS) $(LIBS)  -o $@
 
 $(OBJS): | $(TEMP_DIR)
