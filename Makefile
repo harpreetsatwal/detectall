@@ -1,6 +1,6 @@
 CXXFLAGS =-std=gnu++0x  -Wl,--no-as-needed
 
-EXE     = detect
+EXE     =detect
 
 LDFLAGS = -lpthread
 
@@ -28,5 +28,5 @@ $(TEMP_DIR)/%.o : %.cpp
 
 .PHONY: clean
 clean:
-	rm -f $(PROGS) $(OBJS) core
+	rm -f $(PROGS) $(OBJS) $(EXE) core *~
 	rm -rf $(TEMP_DIR)
