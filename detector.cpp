@@ -17,12 +17,12 @@ void detector::task ( void )
 		value = *ptr;
 		m_poInBuf->end_reading();
 
-		cout << __PRETTY_FUNCTION__<<":" <<" reading index = " <<
+		LOG (INFO) << " reading index = " <<
 				read_index << " value = " << value << endl;
 	}
 	else
 	{
-		cout << __PRETTY_FUNCTION__<<": buffer not available: sleep for 2 secs" << endl;
+		LOG (INFO) << "buffer not available: sleep for 2 secs";
 		sleep (2);
 	}
 
@@ -33,12 +33,12 @@ void detector::task ( void )
 		*ptr = value;
 		m_poOutBuf->end_writing();
 
-		cout << __PRETTY_FUNCTION__<<":" <<" writing index = "
+		LOG (INFO) << " writing index = "
 				<< write_index << " value = " << value << endl;
 	}
 	else
 	{
-		cout << __PRETTY_FUNCTION__<<": buffer not available: sleep for 2 secs" << endl;
+		LOG (INFO) << "buffer not available: sleep for 2 secs" << endl;
 		sleep (2);
 	}
 

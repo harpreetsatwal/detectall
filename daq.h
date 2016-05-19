@@ -9,7 +9,6 @@
 #define DAQ_H_
 #include "unit.h"
 
-
 class daq : public unit
 {
     private:

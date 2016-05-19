@@ -10,6 +10,10 @@ SRCS      = $(wildcard *.cpp)
 OBJS      = $(patsubst %.cpp,$(TEMP_DIR)/%.o,$(SRCS))
 DEP = $(OBJS:%.o=%.d)
 
+LIBS=-L/opt/sensen/lib
+INCLUDE=-I/opt/sensen/include
+LDLIBS=-lglog
+
 all:$(EXE)
   
 $(EXE): $(OBJS)

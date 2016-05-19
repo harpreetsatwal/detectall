@@ -21,12 +21,12 @@ void daq::task ( void )
 		*ptr = value;
 		m_poOutBuf->end_writing();
 
-		cout << __PRETTY_FUNCTION__<<":" <<" writing index = "
-				<< write_index << " value = " << value << endl;
+		LOG (INFO) <<" writing index = "
+				<< write_index << " value = " << value;
 	}
 	else
 	{
-		cout << __PRETTY_FUNCTION__<<": buffer not available: sleep for 2 secs" << endl;
+		LOG (INFO) << "buffer not available: sleep for 2 secs";
 		sleep (2);
 	}
 }

@@ -17,12 +17,12 @@ void result::task ( void )
 		value = *ptr;
 		m_poInBuf->end_reading();
 
-		cout << __PRETTY_FUNCTION__<<":" <<" reading index = " <<
+		LOG (INFO) << " reading index = " <<
 				read_index << " value = " << value << endl;
 	}
 	else
 	{
-		cout << __PRETTY_FUNCTION__<<":" <<" buffer not available: sleep for 2 secs" << endl;
+		LOG (INFO) << " buffer not available: sleep for 2 secs" << endl;
 		sleep (2);
 	}
 
